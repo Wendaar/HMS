@@ -1,0 +1,202 @@
+<section class="hms-extras">
+
+  <!-- TEASERS / COMING SOON -->
+  <div class="teasers-grid">
+    <!-- 1) New Year Gift -->
+    <a href="https://prod.hms.wootera.net/org/phm/extras_player" target="_blank" class="teaser-card teaser-gift">
+      <div class="teaser-badge">COMING SOON • HMS</div>
+      <h3>Your New Year Gift 🎁</h3>
+      <p>Brzy si v HMS vyzvedneš svůj zimní dárek. Sleduj svůj profil!</p>
+      <span class="teaser-link">Více už brzy →</span>
+    </a>
+
+    <!-- 2) Super Stats -->
+    <a href="https://prod.hms.wootera.net/org/phm/extras_player" target="_blank" class="teaser-card teaser-stats">
+      <div class="teaser-badge">WORK IN PROGRESS</div>
+      <h3>Your Super Stats in Detail 📊</h3>
+      <p>Detailní rozbor tvých statistik. Jen pro registrované hráče HMS.</p>
+      <span class="teaser-link">Tvoje statistiky už brzy →</span>
+    </a>
+
+    <!-- 3) League Rating -->
+    <a href="https://prod.hms.wootera.net/org/phm/extras_player" target="_blank" class="teaser-card teaser-rating">
+      <div class="teaser-badge">COMING SOON</div>
+      <h3>Your League Rating ⭐⭐⭐⭐⭐</h3>
+      <p>Jak si stojíš mezi ostatními? Tvůj PHM rating je na cestě.</p>
+      <span class="teaser-link">Tvůj rating už brzy →</span>
+    </a>
+  </div>
+
+  <!-- PARTNER FLYERS / EXTRAS -->
+  <div class="flyer-grid">
+    <div class="flyer">
+      <a href="https://www.bauerhockey.cz/" target="_blank">
+        <img src="https://github.com/Wendaar/PHM/blob/main/Bauer%20v%C4%9Brnostn%C3%AD%20program%20PHM%20cup.png?raw=true" alt="Leták Bauer">
+      </a>
+    </div>
+    <div class="flyer">
+      <a href="https://autopapousek.cz/" target="_blank">
+        <img src="https://github.com/Wendaar/PHM/blob/main/Papousek%20letak1.png?raw=true" alt="Leták Papoušek">
+      </a>
+    </div>
+    <div class="flyer">
+      <a href="https://www.phmcup.cz/l/winter-classics-2026-subotica-srbsko/" target="_blank">
+        <img src="https://github.com/Wendaar/PHM/blob/main/Subotica%20Letak%20PHM.png?raw=true" alt="Leták Subotica">
+      </a>
+    </div>
+    <div class="flyer">
+      <a href="https://www.powerade.com/home" target="_blank">
+        <img src="https://github.com/Wendaar/PHM/blob/main/ban_1_9_16_hrac%20a%20napis.png?raw=true" alt="Leták PHM">
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<style>
+.hms-extras {
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* TEASERS GRID */
+.teaser-card h3,
+.teaser-card p,
+.teaser-card .teaser-link,
+.teaser-card .teaser-badge {
+  font-family: "Hitch Grotesk", "Frontline", "Roboto Condensed", Arial, sans-serif !important;
+}
+.teasers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.teaser-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem 1.2rem;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  overflow: hidden;
+  min-height: 150px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Poloprůhledný overlay pro čitelnost textu */
+.teaser-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.2)
+  );
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+
+.teaser-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.teaser-card h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.teaser-card p {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.teaser-link {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+}
+
+.teaser-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+/* Hover efekty */
+.teaser-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s ease;
+}
+
+.teaser-card:hover .teaser-link {
+  text-decoration: underline;
+}
+
+/* Konkrétní pozadí teaserů – sem si pak dáš svoje gify / obrázky */
+.teaser-gift {
+  /* Example: zimní gif / obrázek */
+  background-image: url("https://github.com/Wendaar/HMS/blob/main/HMS_Extras_Gift_Teaser_Background.png?raw=true");
+}
+
+.teaser-stats {
+  /* Example: rozmazaný graf */
+  background-image: url("https://github.com/Wendaar/HMS/blob/main/HMS_Extras_Stats_Teaser_Background.png?raw=true");
+}
+
+.teaser-rating {
+  /* Example: hvězdičky / rating */
+  background-image: url("https://github.com/Wendaar/HMS/blob/main/HMS_Extras_Rating_Teaser_Background.png?raw=true");
+}
+
+/* PŮVODNÍ FLYER GRID */
+.flyer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  box-sizing: border-box;
+}
+
+.flyer img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.flyer img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobilní doladění */
+@media (max-width: 600px) {
+  .hms-extras {
+    padding: 1rem;
+  }
+
+  .teaser-card {
+    min-height: 130px;
+  }
+}
+</style>
